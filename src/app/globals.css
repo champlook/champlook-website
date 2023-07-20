@@ -1,26 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiempos+Headline:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Avenir+Next:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@font-face{
-    font-family: 'myfont';
-    src: url('/avfont.otf');
+body {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "myfont";
+  src: url("/avfont.otf");
 }
 
-@font-face{
-    font-family: 'myfontB';
-    src: url('/avfontB.otf');
+@font-face {
+  font-family: "myfontB";
+  src: url("/avfontB.otf");
 }
-@font-face{
-    font-family: 'myfontr';
-    src: url('/avfontr.otf');
+@font-face {
+  font-family: "myfontr";
+  src: url("/avfontr.otf");
 }
-@font-face{
-    font-family: 'myfonttiesemi';
-    src: url('/tiehsemi.otf');
+@font-face {
+  font-family: "myfonttiesemi";
+  src: url("/tiehsemi.otf");
 }
-@font-face{
-    font-family: 'myfonttiehmed';
-    src: url('/tiehmed.otf');
+@font-face {
+  font-family: "myfonttiehmed";
+  src: url("/tiehmed.otf");
 }
