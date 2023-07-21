@@ -1,3 +1,9 @@
-export default function Codeofconduct() {
-  return <div>Code-of-conduct</div>;
+import CodeOfConduct from "../Components/CodeofConduct/comp"
+
+const codeOfConduct = () => {
+  return (
+    <CodeOfConduct/>
+  )
 }
+
+export default codeOfConduct
