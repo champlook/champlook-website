@@ -5,11 +5,13 @@ import { Navbar } from "../Components/Home/Navbar";
 
 export default function Home() {
   return (
-    <div className="relative bg-whitesmoke-100 h-screen overtext-left text-[1rem] text-black font-avnext ">
+    <div className=" bg-gray-300 h-auto  text-[1rem] text-black font-avnext ">
+      <div>
       <Navbar />
       <ContentSection />
       <Blog />
-      <Footer />
+      <Footer/>
+      </div>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 export const Footer = () => {
   return (
-    <div className="absolute h-[calc(100%_-_1013px)] top-[157.06rem] bottom-[0rem] left-[calc(50%_-_631px)] w-[78.88rem] text-[2.63rem]">
+    <div className="absolute  h-[calc(100%_-_1013px)] top-[160rem] bottom-[0rem] left-[calc(50%_-_631px)] w-[78.88rem] text-[2.63rem] ">
       <div className="absolute h-[calc(100%_-_188.98px)] w-full top-[0rem] right-[0rem] bottom-[11.81rem] left-[0rem]">
-        <div className="absolute h-[calc(100%_+_4px)] w-[calc(100%_-_750px)] top-[-0.16rem] right-[45.44rem] bottom-[-0.09rem] left-[1.44rem] flex flex-col pt-[0rem] px-[0rem] pb-[2rem] box-border items-start justify-start gap-[4rem]">
+        <div className="absolute h-[calc(100%_+_4px)] w-[calc(100%_-_750px)] top-[-0.16rem] right-[45.44rem]  bottom-[-0.09rem] left-[1.44rem] flex flex-col pt-[0rem] px-[0rem] pb-[2rem] box-border items-start justify-start gap-[4rem]">
           <div className="flex flex-row pt-[0rem] pb-[0.04rem] pr-[2.63rem] pl-[0rem] items-start justify-start">
-            <b className="relative tracking-[-0.48px] leading-[3.18rem] flex items-center w-[29.38rem] shrink-0">
+            <b className="relative tracking-[-0.48px] leading-[3.18rem] flex items-center w-[29.38rem] shrink-0 ">
               <span className="[line-break:anywhere] w-3/4  font-avnextb">
                 <span>{`Fueled by `}</span>
                 <span className="text-red">❤️</span>
