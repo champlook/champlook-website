@@ -10,23 +10,23 @@ import fellowbanner from "./images/fellowbanner.svg";
 export const ContentSection = () => {
   return (
     <>
-      <div className="absolute top-[12.13rem] left-[6.88rem] text-[2.19rem] leading-[125%] font-semibold font-tiehs flex items-center w-[6.06rem] h-[3.31rem]">
+      <div className="absolute top-[12.13rem]  left-[6.88rem] text-[2.19rem] leading-[125%] font-semibold font-tiehs flex items-center w-[6.06rem] h-[3.31rem]">
         Now
       </div>
-      <div className="absolute top-[5.63rem] left-[0rem] bg-white w-[90rem] h-[5.38rem] text-center text-[1.75rem]">
-        <div className="absolute top-[1rem] left-[28.44rem] rounded-lg box-border w-[35.5rem] h-[3.44rem] overflow-hidden border-[1px] border-solid border-black">
+      <div className="absolute top-[5.63rem] left-[0rem]  w-[100rem] h-[5.38rem] text-center text-[1.75rem]">
+        <div className="absolute top-[1rem] left-[28.44rem] rounded-lg box-border w-[35.5rem] h-[3.44rem] overflow-hidden border-[1px] border-solid border-gray-400">
           <div className="absolute top-[0rem] left-[0rem] bg-crimson-200 w-[9.88rem] h-[3.44rem] text-white">
-            <div className="absolute top-[0.63rem] left-[0.06rem] leading-[125%] inline-block w-[9.75rem]">
+            <div className="absolute top-[0.63rem] left-[0.06rem] font-semibold leading-[125%] inline-block w-[9.75rem]">
               Discover
             </div>
           </div>
           <div className="absolute top-[0rem] left-[calc(50%_-_71px)] rounded-lg w-[9.88rem] h-[3.44rem]">
-            <div className="absolute top-[0.63rem] left-[calc(50%_-_78px)] leading-[125%] inline-block w-[9.75rem]">
+            <div className="absolute top-[0.63rem] font-semibold left-[calc(50%_-_78px)] leading-[125%] inline-block w-[9.75rem]">
               Hackathon
             </div>
           </div>
           <div className="absolute top-[0rem] left-[25.63rem] rounded-lg w-[9.88rem] h-[3.44rem]">
-            <div className="absolute top-[0.63rem] left-[-0.31rem] leading-[125%] inline-block w-[9.75rem]">
+            <div className="absolute top-[0.63rem] font-semibold left-[-0.31rem] leading-[125%] inline-block w-[9.75rem]">
               Fellowship
             </div>
           </div>
