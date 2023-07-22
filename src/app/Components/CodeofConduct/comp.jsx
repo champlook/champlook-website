@@ -330,7 +330,7 @@ const CodeOfConduct = () => {
           </p>
         </span>
       </div>
-      <b className="absolute top-[188.25rem] left-[20rem] leading-[2.31rem] text-midnightblue">
+      <b className="absolute top-[194rem] left-[30rem] leading-[2.31rem] text-midnightblue">
         Contact us
       </b>
     </div>
