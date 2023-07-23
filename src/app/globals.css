@@ -42,14 +42,16 @@ body {
 }
 
 /* Add minimum margin on both sides */
-.container {
-  margin: 0 5%;
+.container {  
   font-family: "myfont";
+  padding-left: 20rem;
+  padding-right: 17rem;
 }
 .container,
 main {
   word-wrap: break-word;
   overflow-x: hidden;
+;
 }
 .terms-container {
   max-width: 60%; /* Change to 90% or 70% or your desired value */

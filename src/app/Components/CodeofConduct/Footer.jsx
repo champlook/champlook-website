@@ -35,7 +35,7 @@ const Footer = (props) => {
                         className="inline ml-6"
                     >
                     </Image>
-                    <div className='ml-8 text-black mb-[2rem]'>35-3-87A, Devudu Cheruvu, Ongole, Prakasam, Andhra Pradesh,India - 523001</div>
+                    <div className='ml-8 text-black pb-[2rem]'>35-3-87A, Devudu Cheruvu, Ongole, Prakasam, Andhra Pradesh,India - 523001</div>
                     </div>
 
 

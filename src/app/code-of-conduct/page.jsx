@@ -16,7 +16,7 @@ import Footer from "../Components/CodeofConduct/Footer";
 const codeOfConduct = () => {
   return (
     <>
-      <div className="bg-[#F5F7F7] px-[5rem]">
+      <div className="bg-[#F5F7F7] pl-[20rem] pr-[17rem]">
         {/* logo  */}
         <div className="" >
           <Image src={logo}
