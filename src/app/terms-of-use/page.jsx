@@ -1,3 +1,4 @@
+import Footer from "../Components/CodeofConduct/Footer";
 import Logo from "../Components/PrivacyPolicy/Logo";
 import AboutChampluk from "../Components/TermsofUse/AboutChampluk";
 import ChamplukServiceProvider from "../Components/TermsofUse/ChamplukServiceProvider";
@@ -17,7 +18,7 @@ import WarrantiesDisclaimers from "../Components/TermsofUse/WarrantiesDisclaimer
 
 export default function Termsofuse() {
   return (
-    <div className="container">
+    <div className="container ">
       <Logo />
       <TermsOfUse />
       <AboutChampluk />
@@ -34,6 +35,7 @@ export default function Termsofuse() {
       <Identification />
       <Miscellaneous />
       <Changes />
+      <Footer content="If you want to delete your account and data, or have any other requests, queries, questions, or clarifications to seek, please get in touch with us." />
     </div>
   );
 }

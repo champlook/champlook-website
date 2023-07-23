@@ -1,3 +1,4 @@
+import Footer from "../Components/CodeofConduct/Footer";
 import Applicability from "../Components/PrivacyPolicy/Applicability";
 import ChangesToPolicy from "../Components/PrivacyPolicy/ChangesToPolicy";
 import InformationCollect from "../Components/PrivacyPolicy/InformationCollect";
@@ -17,6 +18,7 @@ export default function Privacypolicy() {
       <StorageSecurity />
       <ThirdPartyServices />
       <ChangesToPolicy />
+      <Footer content="For any data-related consent withdrawal, access, review, correction, modification, deletion of personal information, or the exercise of data rights under the EU GDPR or any other privacy law, or for any related requests or inquiries, please feel free to contact us." />
     </div>
   );
 }
