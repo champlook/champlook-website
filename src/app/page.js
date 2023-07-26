@@ -26,7 +26,7 @@ export default function Login() {
 
   return (
     <div className="bg-gray-200 w-full h-screen pt-2 pb-4">
-      <div className="w-full h-28 ">
+      <div className="w-full h-24 ">
         {/* <Link href="/" className="text-center ">
           <Image
             src={logo}

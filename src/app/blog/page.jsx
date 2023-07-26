@@ -2,8 +2,12 @@ import Image from "next/image";
 import blog1 from "../Components/Blog/images/blog-1.svg";
 import BlogPage from "../Components/Blog/blogcom";
 import { Footer } from "../Components/Blog/Footer";
+import { Navbar } from "../Components/Home/Navbar";
 export default function Blog() {
   return (
+    <div>
+     <Navbar title="blog"/>
+    
     <div className="bg-gray-200 w-full h-auto pt-24">
       <h2 className="font-tiehs font-bold text-4xl pt-2 ml-28">
         Featured Blog
@@ -39,6 +43,7 @@ export default function Blog() {
       </div>
       <BlogPage />
       <Footer/>
+    </div>
     </div>
   );
 }
