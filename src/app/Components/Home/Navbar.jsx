@@ -1,10 +1,15 @@
+"use client"
 import Image from "next/image";
 import img1 from "./images/logo.svg";
+import { useRef } from "react";
 import Link from "next/link";
-export const Navbar = () => {
+
+export const Navbar = ({children,title}) => {
+  
   return (
-    <div className="absolute top-[0rem] left-[0rem] bg-white w-[100rem] h-[5.38rem] text-center text-[1.13rem] text-dimgray-200 font-avnextr ">
-      <Link href="#" >
+
+    <div className="absolute top-[0rem] left-[0rem] bg-white w-[100rem] h-[5.38rem] text-center text-[1.13rem] text-dimgray-200  font-avnextr ">
+      <Link href="/" >
         <Image
           className="absolute top-[0.81rem] left-[5.19rem] w-[12.25rem] h-[3.69rem] object-cover"
           alt=""
@@ -13,12 +18,12 @@ export const Navbar = () => {
       </Link>
 
       <div className="absolute top-[1.44rem] left-[20.38rem] leading-[125%] flex items-center justify-center w-[4.38rem] h-[2.5rem]">
-        <Link href="/home" className="font-avnext font-bold">
+        <Link href="/home" className={`${title==='home'?"text-red":""} font-avnext font-bold`}>
           Home
         </Link>
       </div>
       <div className="absolute top-[1.44rem] left-[25.88rem] leading-[125%] flex items-center justify-center w-[2.94rem] h-[2.5rem]">
-        <Link href="/blog" className="font-avnext font-bold">
+        <Link href="/blog" className={`${title==='blog'?"text-red":""} font-avnext font-bold`}>
          Blog
         </Link>
       </div>
@@ -33,7 +38,7 @@ export const Navbar = () => {
         </div>
       </button>
       <div className="absolute top-[1.44rem] left-[30.56rem] leading-[125%] text-left flex items-center w-[5.69rem] h-[2.5rem]">
-        <Link href='/aboutus' className="font-avnext font-bold">About Us</Link>
+        <Link href='/aboutUS' className={`${title==='about'?"text-red":""} font-avnext font-bold`}>About Us</Link>
       </div>
     </div>
   );

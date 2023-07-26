@@ -9,7 +9,7 @@ import { Navbar } from "../Home/Navbar";
 export default function BlogPage() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar/> */}
       <div className="w-9/12 h-auto flex ml-52 pb-3 space-x-2  mt-5 pr-3 ">
         <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
           <Image
