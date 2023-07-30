@@ -7,8 +7,11 @@ const Footer = (props) => {
     return (
         <>
             <div className=" font-avnext text-[#00005C] font-bold text-3xl mt-[2rem]" >Contact Us</div>
-
-            <div className="flex flex-row justify-evenly  mb-[4rem]">
+            
+            <hr className='mb-2 border border-t-2 border-gray-200'/>
+                
+                
+            <div className="flex flex-row justify-evenly  pb-[4rem]">
                 <div className='w-[50%] p-4 bg-[#D81F1F] text-white h-auto shadow-lg rounded'>
                    {props.content}
                 </div>
@@ -23,7 +26,7 @@ const Footer = (props) => {
                             className="inline ml-6 "
                         >
                         </Image>
-                        <div className='text-[#3770FF]  ml-8 '>support@champlook.com</div>
+                        <div className='text-[#3770FF]  ml-2 '>support@champlook.com</div>
                     </div>
 
 
@@ -32,10 +35,10 @@ const Footer = (props) => {
                         height={13.333}
                         width={16.667}
                         alt="homeicon"
-                        className="inline ml-6"
+                        className="inline ml-6 -mt-12"
                     >
                     </Image>
-                    <div className='ml-8 text-black pb-[2rem]'>35-3-87A, Devudu Cheruvu, Ongole, Prakasam, Andhra Pradesh,India - 523001</div>
+                    <div className='ml-2 mt-2 text-black pb-[2rem]'>35-3-87A, Devudu Cheruvu, Ongole, Prakasam, Andhra Pradesh,India - 523001</div>
                     </div>
 
 

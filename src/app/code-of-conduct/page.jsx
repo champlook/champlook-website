@@ -27,7 +27,7 @@ const codeOfConduct = () => {
           >
           </Image>
         </div>
-        <div className="  text-[#D81F1F] font-bold text-3xl absolute top-[10rem]" >Terms of Use</div>
+        <div className="  text-[#D81F1F] font-bold text-3xl pt-4" >Terms of Use</div>
         
         <Applicability />
         <Plagiarism/>
