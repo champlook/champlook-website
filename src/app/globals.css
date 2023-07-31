@@ -42,7 +42,13 @@ body {
 }
 
 /* Add minimum margin on both sides */
+<<<<<<< HEAD
 .container {  
+=======
+.container {
+  padding-left: 20rem;
+  padding-right: 17rem;
+>>>>>>> 2739f76bc226c42db6eb4a625dba6d7b36fd5c6f
   font-family: "myfont";
   padding-left: 20rem;
   padding-right: 17rem;
@@ -113,3 +119,4 @@ main {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
