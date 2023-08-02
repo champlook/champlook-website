@@ -41,7 +41,7 @@ export const ContentSection = () => {
       </div>
       <form className="absolute top-[16rem] left-[calc(50%_-_115px)] rounded-lg bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.1)] w-[46.44rem] h-[40.13rem]">
         <b className="absolute top-[2.06rem] left-[2.75rem] text-[2.56rem] leading-[125%] flex font-avnextb text-gray-3 text-left items-center w-[40rem] h-[5.13rem]">
-          Hackathon 2015
+          Hackathon 2023
         </b>
         <div className="absolute top-[6.38rem] left-[2.75rem] text-[1.13rem] leading-[125%] font-avnextb text-gray-1 text-left flex items-center w-[6.69rem] h-[1.63rem]">
           Hackathon
