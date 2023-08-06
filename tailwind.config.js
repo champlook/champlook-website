@@ -48,6 +48,9 @@ module.exports = {
         lightgreen: "#60dc74",
         lightskyblue: "#64b3df",
         red: "#ff3131",
+        customcolor: "#475D65",
+        customgray: "#003E54",
+        customblack:"#444444",
       },
       fontFamily: {
         avnext: ["myfont"],
@@ -72,6 +75,8 @@ module.exports = {
         "5xl": "24px",
         lg: "18px",
         xs: "12px",
+        ss:"10px",
+        xxs:"8px",
         sm: "14px",
         "22xl": "41px",
         base: "16px",
