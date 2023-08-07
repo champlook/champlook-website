@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className=" bg-gray-300 h-auto  text-[1rem] text-black font-avnext ">
       <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <ContentSection />
       <Blog />
       <Footer/>

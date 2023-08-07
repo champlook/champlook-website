@@ -10,7 +10,7 @@ import fellowbanner from "./images/fellowbanner.svg";
 export const ContentSection = () => {
   return (
     <>
-      <div className="absolute top-[12.13rem]  left-[6.88rem] text-[2.19rem] leading-[125%] font-semibold font-tiehs flex items-center w-[6.06rem] h-[3.31rem]">
+      {/* <div className="absolute top-[12.13rem]  left-[6.88rem] text-[2.19rem] leading-[125%] font-semibold font-tiehs flex items-center w-[6.06rem] h-[3.31rem]">
         Now
       </div>
       <div className="absolute top-[5.63rem] left-[0rem]  w-[100rem] h-[5.38rem] text-center text-[1.75rem]">
@@ -208,7 +208,211 @@ export const ContentSection = () => {
             Apply now
           </div>
         </button>
+      </div> */}
+
+
+      <div className="bg-[#F5F7F7] pl-[5.81rem] pr-3">
+      <div className="sm:hidden text-[2.56rem] leading-[125%]  font-avnextb text-gray-3">Unleash Your <br /> Creativity. Join <br /> the <span className="text-red">Hackathon </span><br /> Revolution!</div>
+        <div className=" max-[640px]:hidden  pl-[6.88rem]  text-[2.19rem] leading-[125%] font-semibold font-tiehs w-[6.06rem] h-[3.31rem]">
+          Now
+        </div>
+
+
+
+
+        <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
+
+          <div className='w-[100%] sm:w-[30%]  max-[640px]:mb-5 bg-white text-white h-auto shadow-lg rounded'>
+
+            <Image
+              className=" pt-[2rem]  rounded-[10px]  h-[37.69rem]  "
+              alt="Main banner"
+              src={banner}
+              width={427.04}
+              height={603.04}
+
+
+            />
+
+
+          </div>
+          <div className='w-[100%]  sm:w-[50%]  bg-white p-10  sm:ml-8 h-auto shadow-lg rounded mr-[5.75rem]'>
+            <div className="flex flex-row justify-evenly ">
+              <b className=" text-[2.56rem] leading-[125%] flex font-avnextb text-gray-3 text-left  ">
+                Hackathon 2015
+              </b>
+              <Image
+                className=" w-[3.75rem] h-[3.75rem]"
+                alt=""
+                src={twittericon}
+              />
+              <Image
+                className=" w-[3.75rem] h-[3.75rem]"
+                alt=""
+                src={linkedinicon}
+              />
+
+              <Image
+                className=" w-[3.75rem] h-[3.75rem]"
+                alt=""
+                src={linkicon}
+              />
+            </div>
+            <div className=" text-[1.13rem] leading-[125%] font-avnextb text-gray-1 text-left  w-[6.69rem] h-[1.63rem]">
+              Hackathon
+            </div>
+
+            <div className=" pt-8 text-[1.13rem] leading-[125%]  text-black text-left ">
+              ETHIndia grants program is the ethos of a garden of possibilities. We
+              believe that with the right resources and support, builders can grow
+              and flourish, and their ideas can blossom into something amazing.
+              That's why we're on a mission to help builders build on Ethereum and
+              unlock the full potential of the ecosystem.
+            </div>
+
+            <div className=" text-[1.13rem] pt-8 leading-[125%] text-dImageray-100 text-left  w-[6.69rem] h-[1.63rem]">
+              THEME
+            </div>
+
+            <div className="flex flex-row text-center pt-9 justify-evenly">
+              <div className=" rounded-xl box-border w-[8.47rem]  h-[2.25rem] border-[2px] border-solid border-whitesmoke-200">
+                <b className="text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkgray text-left">
+                  Flutter
+                </b>
+              </div>
+              <div className=" rounded-xl box-border w-[8.47rem] h-[2.25rem] border-[2px] border-solid border-whitesmoke-200">
+                <b className=" text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkgray text-left">
+                  Blockchain
+                </b>
+              </div>
+              <div className=" rounded-xl box-border w-[8.47rem] h-[2.25rem] border-[2px] border-solid border-whitesmoke-200">
+                <b className=" text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkgray text-left">
+                  24 HR
+                </b>
+              </div>
+            </div>
+
+
+            <div className="flex flex-col  py-[2rem] pr-[6.63rem] pl-[0rem] items-start justify-start gap-[0.25rem] z-[0]">
+              <div className="relative text-[0.88rem] tracking-[1.68px] font-bold  leading-[1rem] uppercase  text-silver text-left">
+                Runs from
+              </div>
+              <b className="relative text-[1.25rem] leading-[1.75rem]  text-darkslategray-200 text-left font-avnextb">
+                May 1 - Dec 1, 2023
+              </b>
+            </div>
+
+            <div className="flex flex-row text-center justify-evenly">
+              <div className=" rounded-2xl bg-snow-100 w-[5.59rem] h-[2rem]">
+                <b className=" text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercasetext-darkslategray-100 text-left font-avnextb">
+                  ONLINE
+                </b>
+              </div>
+
+              <div className=" rounded-2xl bg-snow-100 w-[5.59rem] h-[2rem]">
+                <b className="text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkslategray-100 text-left  font-avnextb">
+                  24HR
+                </b>
+              </div>
+            </div>
+
+            <button className=" ml-64 mt-6 text-[1.5rem] leading-[125%] w-auto align-middle flex  rounded-md bg-red text-black text-left"> Apply now</button>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+        <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
+          <div className='w-[100%] sm:w-[75%] p-4 mr-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded'>
+            <Image
+              className=" w-[42.75rem] h-[24.19rem] object-cover"
+              alt=""
+              src={fellowbanner}
+            />
+
+            <div className=" leading-[125%] text-[2rem] font-medium flex items-center w-[11.5rem]  font-avnextr">
+              Introducing
+            </div>
+            <b className=" text-[2.5rem] leading-[125%]  text-indianred  w-[21.63rem]  font-avnextb">
+              Elon Fellowship!
+            </b>
+            <div className=" text-[1.5rem] leading-[125%]  w-[44.38rem]">
+              "Join the transformative Elon Fellowship, empowering aspiring startups
+              with extensive training, funding, and mentorship to bring their
+              innovative ideas to life."
+            </div>
+
+
+
+          </div>
+          <div className='w-[100%] sm:w-[50%] p-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded'>
+            <div className="text-[2rem] leading-[125%] inline-block w-[23.44rem] font-avnextb">
+              Elon Fellowship for budding entrepreneurs
+            </div>
+            <div className="text-[1rem] leading-[125%] inline-block w-[22.25rem] h-[9.31rem] text-gray-1">
+              The Fellowship is a prestigious program designed to foster and
+              support aspiring entrepreneurs in their journey to build successful
+              businesses and create a positive impact in the entrepreneurial
+              ecosystem.
+            </div>
+
+            <div className="flex flex-row justify-evenly">
+              <Image
+                className=" w-[3.75rem] h-[3.75rem]"
+                alt=""
+                src={twittericon}
+              />
+              <Image
+                className=" w-[3.75rem] h-[3.75rem]"
+                alt=""
+                src={linkedinicon}
+              />
+
+              <Image
+                className=" w-[3.75rem] h-[3.75rem]"
+                alt=""
+                src={linkicon}
+              />
+            </div>
+
+            <div className=" text-[1.13rem] leading-[125%] text-gray-1 pt-6">
+              Starts From
+            </div>
+            <div className=" leading-[125%]">
+              14th Sept to 14th Oct
+            </div>
+
+            <p className="pt-6 m-0">Applications Close in</p>
+            <p className="m-0 text-crimson-100">{`50d : 11h : 14m `}</p>
+
+            {/* <div className=" text-[1.5rem] leading-[125%] w-auto flex   bg-red text-black text-left">
+              Apply now
+            </div> */}
+            <button className=" ml-32 mt-6 text-[1.5rem] leading-[125%] w-auto align-middle flex  rounded-md bg-red text-black text-left"> Apply now</button>
+
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
       </div>
+
+
+
     </>
   );
 };
