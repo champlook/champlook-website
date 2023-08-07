@@ -11,11 +11,11 @@ const Footer = (props) => {
             <hr className='mb-2 border border-t-2 border-gray-200'/>
                 
                 
-            <div className="flex flex-row justify-evenly  pb-[4rem]">
-                <div className='w-[50%] p-4 bg-[#D81F1F] text-white h-auto shadow-lg rounded'>
+            <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
+                <div className='w-[100%] sm:w-[50%] p-4 max-[640px]:mb-4 bg-[#D81F1F] text-white h-auto shadow-lg rounded'>
                    {props.content}
                 </div>
-                <div className='w-[50%] bg-white ml-8 h-auto shadow-lg rounded'>
+                <div className='w-[100%]  sm:w-[50%]  bg-white   sm:ml-8 h-auto shadow-lg rounded'>
 
                     <div className="ml-6 font-avnext text-[#00005C] font-bold text-3xl mt-[1rem]" >Champlook</div>
                     <div className='flex justify-start'>
