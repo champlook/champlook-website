@@ -1,6 +1,6 @@
 // pages/index.js
 //import Logo from '../Preferences/components/Logo';
-import SpecialityForm from '../components/Preferences/Form';
+import SpecialityForm from '../Components/Preferences/Form';
 
 const HomePage = () => {
   return (
