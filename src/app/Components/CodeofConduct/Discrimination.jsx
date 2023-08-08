@@ -5,7 +5,7 @@ const Discrimination = () => {
         <>
 
             <div className=" font-avnext text-[#D81F1F] font-bold text-3xl mt-[2rem]" >No discrimination</div>
-
+            <hr className='mb-2 border border-t-2 border-gray-200'/>
             <div className='leading-8 mt-[2rem]'>Champlook-hosted hackathons are committed to providing a safe and inclusive environment, free    from discrimination. The following factors shall not be the basis for any form of discrimination:</div>
             <ul className='list-disc ml-[2rem] font-avnextb leading-8'>
                 <li> Gender</li>
