@@ -9,7 +9,7 @@ import StorageSecurity from "../Components/PrivacyPolicy/StorageSecurity";
 import ThirdPartyServices from "../Components/PrivacyPolicy/ThirdPartyServices";
 export default function Privacypolicy() {
   return (
-    <div className="container ">
+    <div className="container max-[639px]:pl-[1.8rem]  max-[639px]:pr-[1.8rem] sm:pl-[3rem] sm:pr-[2rem] md:pr-[5rem] md:pl-[3rem] lg:pr-[7rem] lg:pl-[6rem]  xl:pl-[20rem] xl:pr-[17rem]">
       <Logo />
       <PrivacyPolicy />
       <Applicability />
