@@ -3,10 +3,8 @@ import Image from "next/image";
 import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import signinwithGoogle from "./Components/Login/firebase.js";
-import auth from "./Components/Login/firebase";
-import provider from "./Components/Login/firebase";
-import { react, useState, useEffect } from "react";
+import signinwithGoogle from "./Firebase-config.js";
+import { react, useState, useEffect, useContext } from "react";
 import googlesvg from "./Components/Login/images/googlesvg.svg";
 import login from "./Components/Login/images/login_svg.svg";
 import logo from "./Components/Login/images/logo_com.svg";
@@ -14,14 +12,9 @@ import { Nunito_Sans } from "next/font/google";
 
 export default function Login() {
   const router = useRouter();
-
   const signin = async () => {
     const userg = await signinwithGoogle();
-    // setUser(userg.user.displayName)
-    // console.log(userg.user.displayName)
-    console.log(userg.user.uid);
-    // localStorage.setItem("name",userg.user.displayName);
-    router.push("/home");
+    router.push("/signup");
   };
 
   return (
@@ -68,7 +61,15 @@ export default function Login() {
         </button>
         <p className="mt-3 m-auto font-avnext font-semibold text-xs text-gray-500 pb-5 text-center ">
           By continuing you agree to the
-          <a href="/terms-of-use" className="text-red"> Terms of Use </a> and <a href="/privacy-policy" className="text-red"> Privacy Policy</a>
+          <a href="/terms-of-use" className="text-red">
+            {" "}
+            Terms of Use{" "}
+          </a>{" "}
+          and{" "}
+          <a href="/privacy-policy" className="text-red">
+            {" "}
+            Privacy Policy
+          </a>
         </p>
       </div>
       {/* {user && <button>hello</button>} */}
