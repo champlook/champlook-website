@@ -23,7 +23,7 @@ export default function BlogPage() {
           </h2>
           <p className="font-avnext font-medium text-base pl-3 pr-3">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
-            consequuntur eveniet quae veritatis, aut sed suscipit ea. Illo, quas
+            consequuntur eveniet quae veritatis, aut sed suscipit eadfsddf. Illo, quas
             quam? Lorem ipsum, dolor sit amet consectetur adipisicing.
           </p>
           <p className="pt-2 pl-3 pr-3 pb-3 font-avnext font-medium text-base text-gray-400">
