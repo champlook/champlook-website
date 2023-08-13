@@ -10,15 +10,15 @@ export default function BlogPage() {
   return (
     <div>
       {/* <Navbar/> */}
-      <div className="w-9/12 h-auto flex ml-52 pb-3 space-x-2  mt-5 pr-3 ">
-        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
+      <div className="w-9/12 h-auto flex flex-row   ml-52 pb-3 space-x-2  mt-5 pr-3 responsive">
+        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200 card">
           <Image
             src={blog2}
             width={500}
             height={500}
             className="p-1 h-auto w-full"
           />
-          <h2 className="font-avnextb font-medium text-xl p-3">
+          <h2 className="font-avnextb font-medium text-xl p-3 md:font-avnextb sm:font-avnextb">
             The way you plan will define the future of hackathon
           </h2>
           <p className="font-avnext font-medium text-base pl-3 pr-3">
@@ -30,7 +30,7 @@ export default function BlogPage() {
             May 31, 2023 | 10 min read
           </p>
         </div>
-        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
+        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200 card">
           <Image
             src={blog3}
             width={500}
@@ -49,7 +49,7 @@ export default function BlogPage() {
             Jun 26, 2023 | 2 min read
           </p>
         </div>
-        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
+        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200 card">
           <Image
             src={blog4}
             width={500}
@@ -69,8 +69,8 @@ export default function BlogPage() {
           </p>
         </div>
       </div>
-      <div className="w-9/12 h-auto flex ml-52 pb-3 space-x-2  mt-5 pr-3">
-        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
+      <div className="w-9/12 h-auto flex ml-52 pb-3 space-x-2  mt-5 pr-3 responsive">
+        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200 card">
           <Image
             src={blog5}
             width={500}
@@ -89,7 +89,7 @@ export default function BlogPage() {
             May 31, 2023 | 10 min read
           </p>
         </div>
-        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
+        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200 card">
           <Image
             src={blog6}
             width={500}
@@ -108,7 +108,7 @@ export default function BlogPage() {
             Jun 26, 2023 | 2 min read
           </p>
         </div>
-        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200">
+        <div className="bg-white w-1/3 h-full shadow-md rounded-md  border-gray-200 card">
           <Image
             src={blog7}
             width={500}
@@ -128,8 +128,8 @@ export default function BlogPage() {
           </p>
         </div>
       </div>
-      <div className="text-center mt-7 pb-3">
-        <button className="text-center   bg-gray-100 text-gray-800 font-avnext font-semibold text-lg w-40 h-10 rounded-md">
+      <div className="text-center mt-7 pb-3 blog-lm">
+        <button className="text-center   bg-white text-gray-800 font-avnext font-semibold text-2xl w-60 h-12 rounded-md blog-lm-btn">
           Load more
         </button>
       </div>

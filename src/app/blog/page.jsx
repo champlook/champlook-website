@@ -8,21 +8,21 @@ export default function Blog() {
     <div>
      <Navbar title="blog"/>
     
-    <div className="bg-gray-200 w-full h-auto pt-24">
-      <h2 className="font-tiehs font-bold text-4xl pt-2 ml-28">
+    <div className="bg-gray-100 w-full  h-auto pt-24 blog-bg">
+      <h2 className="font-tiehs font-bold text-4xl pt-2 ml-28 bheading">
         Featured Blog
       </h2>
-      <div className="flex w-4/5 h-auto  mt-6 ml-52 space-x-2 pb-3">
-        <div className="w-1/2 h-full border  bg-white border-solid  rounded-md shadow-md  border-gray-200 ">
+      <div className="flex w-4/5 h-auto  mt-6 ml-52  space-x-2 pb-3 responsive">
+        <div className="w-1/2 h-[21.9rem] border  bg-white border-solid  rounded-md shadow-md  border-gray-200 bcard">
           <Image
             src={blog1}
             height={265}
-            width={50}
+            width={500}
             alt="logo"
-            className=" w-full pt-1 pb-1 pr-2 pl-2 "
+            className="w-full sm:w-full md:w-full pt-1 pb-1 pr-2 pl-2 h-full bimage"
           ></Image>
         </div>
-        <div className="w-5/12 h-auto border bg-white border-solid rounded-md shadow-md overflow-hidden border-gray-200   ">
+        <div className="w-5/12 h-[21.9rem] border bg-white border-solid rounded-md shadow-md overflow-hidden border-gray-200  bcont">
           <h2 className="font-tiehm font-medium text-3xl pl-4 pt-7">
             How the fast pace life working at the startups are effecting youth
           </h2>
