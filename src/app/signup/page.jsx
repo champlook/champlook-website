@@ -30,7 +30,6 @@ export default function page() {
     setOption(option.value);
   };
   const handleSubmit = async () => {
-    console.log("user data in signup :");
     if (
       (!FullName && !UserName && !Password && !Option) ||
       !FullName ||
@@ -38,6 +37,10 @@ export default function page() {
       !Password ||
       !Option
     ) {
+      console.log("Input data not filled");
+    }
+    else{
+      console.log("data filled");
       try {
         await setDoc(doc(db, "users", user.uid), {
           uid: user.uid,
@@ -50,9 +53,6 @@ export default function page() {
       } catch (err) {
         console.log(err);
       }
-    }
-    else{
-      console.log("Input data");
     }
   };
 
