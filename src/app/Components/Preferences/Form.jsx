@@ -1,7 +1,7 @@
 // components/SpecialityForm.js
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -67,11 +67,71 @@ const SpecialityForm = () => {
       // Array for year options
       const years = Array.from({ length: 10 }, (_, index) => new Date().getFullYear() - index);
     
-    const select=(index,field)=>{
+     const [spe,setSpe]=useState("")
+    //  const [hack,setHack]=useState([])
+     const [text,setText]=useState("")
+     const [hackd,setHackd]=useState("")
+    //  const [checkedState, setCheckedState] = useState(
+    //   new Array(hackathonTypes.length).fill(false)
+    // );
+
+     const selectSpecification=(e)=>{
+        setSpe(e.target.value);
+     }
+
+    //  useEffect(()=>{
+         
+    //   //   const updatedCheckedState = checkedState.map((item, index) =>
+    //   //   index === position ? !item : item 
+    //   //   ); 
+  
+    //     setCheckedState(updatedCheckedState)
+       
+    //   // checkedState.map((currentstate,index)=>{
+    //   //     if(currentstate===true)
+    //   //     {
+    //   //        setHack(hackathonTypes[index])
+    //   //     } 
+    //   //   })
+    //  },[])
+
+     const hackathon=(e)=>{
+
+       setHackd(e.target.value)
+        // setHack([...setHackd]);
+         /* for loop to iterate hackathontypes array
+        
+      //    */ 
+      //   setHackd(e.target.value);
+
+
+      //   const updatedCheckedState = checkedState.map((item, index) =>
+      // index === position ? !item : item 
+      // ); 
+
+    //   setCheckedState(updatedCheckedState)
      
-     console.log(index+field);
-    }
-    const [spe,setSpe]=useState("");
+    // checkedState.map((currentstate,index)=>{
+    //     if(currentstate===true)
+    //     {
+    //        setHack(hackathonTypes[index])
+    //     } 
+    //   })
+
+        
+       
+
+     }
+const texthandle=(e)=>{
+setText(e.target.value)
+}
+
+     const submit=()=>{
+      console.log(spe)
+      console.log(text)
+      console.log(hackd);
+
+     }
 
   return (
 
@@ -83,11 +143,12 @@ const SpecialityForm = () => {
 
       <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 speciality-box whitespace-nowrap text-sm md:text-base">   
   {fields.map((field, index) => (
-      <label key={index}  className="bg-white border border-customgray shadow px-2 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 py-1">
-      <input type="button" name="speciality" required  onClick={select(index,field)} />
-      {field}
-    </label>
-       
+    <label key={index} className="bg-white border border-customgray shadow px-2 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 py-1 flex items-start">
+      <span><input type="radio" name="speciality" value={field} required onChange={selectSpecification}/></span>
+      <span className="ml-2"> 
+          {field}
+        </span>
+    </label> 
   ))}
 </div>
 
@@ -100,7 +161,7 @@ const SpecialityForm = () => {
             </h2>
           
               <textarea
-                  
+                  onChange={texthandle}
                    name="skills"
                    placeholder="Languages, Databases, Framework, APIs, and Other tools"
                    required
@@ -117,16 +178,19 @@ const SpecialityForm = () => {
     <h2 className="text-lg font-bold text-gray-600 mb-6 speciality-box whitespace-normal text-sm md:text-base  flex items-start">
       What types of hackathons are you interested in?
     </h2>
-    <div className="grid gap-4 grid-cols-2 speciality-box whitespace-nowrap text-sm md:text-base ">
-      {hackathonTypes.map((type, index) => (
-        <button
-          key={index}
-          className="border border-gray-300 p-2 pl-12 text-customcolor rounded-md speciality-box text-sm md:text-base w-full flex justify-stretch "
-        >
-          {type}
-        </button>
-      ))}
-    </div>
+    
+    <div className="grid gap-4 grid-cols-3 speciality-box whitespace-nowrap text-sm md:text-base">
+  {hackathonTypes.map((type, index) => (
+    
+    <label key={index} className="bg-white border border-customgray shadow px-2 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 flex items-start">
+     <span><input type="checkbox" name="speciality" value={type} required onChange={hackathon} /></span> 
+      
+      <span className="ml-2">{type}</span>
+    
+    </label>
+  ))}
+</div>
+
   </div>
 </div>
 
@@ -173,9 +237,9 @@ const SpecialityForm = () => {
 <h1 className="text-2xl font-bold text-gray-600 ml-0 mb-2 speciality-box whitespace-nowrap text-sm md:text-base">Occupation</h1>
 <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 speciality-box whitespace-nowrap text-sm md:text-base">   
 {occupations.map((field, index) => (
-    <label key={index} className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-ss md:text-base mt-1 mb-1">
-      <input type="button" name="speciality" required />
-      {field}
+    <label key={index} className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-ss md:text-base mt-1 mb-1 flex items-start">
+      <span><input type="radio" name="speciality" required /></span>
+      <span className="ml-2">{field}</span>
     </label>
   ))}
 </div>
@@ -186,9 +250,9 @@ const SpecialityForm = () => {
 <h1 className="text-2xl font-bold text-gray-600 ml-0 mb-2 speciality-box whitespace-nowrap text-sm md:text-base">Current Level Of Study</h1>
 <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 speciality-box whitespace-nowrap text-sm md:text-base">   
 {study.map((field, index) => (
-    <label key={index} className="bg-white border border-gray-300 px-3 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1">
-      <input type="button" name="speciality" required />
-      {field}
+    <label key={index} className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 flex items-start">
+      <span><input type="radio" name="speciality" required /></span>
+      <span className="ml-2">{field}</span>
     </label>
   ))}
 </div>
@@ -307,7 +371,7 @@ const SpecialityForm = () => {
 
 
 
-<button className=" mx-1 mb-20 bg-[#D81F1F] text-white p-2 pr-5 pl-5 hover:bg-red-600 ">
+<button className=" mx-1 mb-20 bg-[#D81F1F] text-white p-2 pr-5 pl-5 hover:bg-red-600 " onClick={submit}>
   Continue
 </button>
 
