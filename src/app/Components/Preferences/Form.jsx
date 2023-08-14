@@ -74,11 +74,11 @@ const SpecialityForm = () => {
       
       <h1 className="text-lg font-bold text-gray-600 mb-4 speciality-box whitespace-nowrap text-sm md:text-base">What's' your speciality?</h1>
 
-      <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 speciality-box whitespace-nowrap text-sm md:text-base">   
+      <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 speciality-box whitespace-nowrap text-sm  sm:text-ss">   
   {fields.map((field, index) => (
-    <label key={index} className="bg-white border border-customgray shadow px-2 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 py-1 flex items-start">
+    <label key={index} className="bg-white border border-customgray shadow px-3 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xxs md:text-base mt-1 mb-1 py-1 flex items-start">
       <span><input type="radio" name="speciality" required /></span>
-      <span className="ml-2"> 
+      <span className=" ml-1"> 
           {field}
         </span>
     </label> 
@@ -157,22 +157,24 @@ const SpecialityForm = () => {
 
 
 
-      <div class="mb-6 mt-4 flex items-start flex-col w-full ">
-      <h1 className="text-2xl font-bold text-black mb-2 speciality-box text-sm md:text-base">
+      <div class="mb-3 mt-4 flex items-start flex-col w-full ">
+      <h1 className="text-xl font-extrabold text-black mb-2 speciality-box text-xl">
           Eligibility 
         </h1>
-    <h2 class="block mb-2 text-sm font-medium text-gray-600 dark:text-white">Location</h2>
-    <input type="text" id="default-input" required class="bg-white border border-gray-300 text-customcolor text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+    <h2 class="block mb-2 text-sm font-bold text-gray-600 ">Location</h2>
+    
+    <input type="text" id="default-input" required class="bg-white border border-gray-300 text-customcolor text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block min-w:264px max-w:400px p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ minWidth: '260px', maxWidth: '400px' }}/>
+    
   </div>
 
 
   <div className="text-center flex items-start flex-col">
 <h1 className="text-2xl font-bold text-gray-600 ml-0 mb-2 speciality-box whitespace-nowrap text-sm md:text-base">Occupation</h1>
-<div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 speciality-box whitespace-nowrap text-sm md:text-base">   
+<div className="grid gap-4 grid-cols-2 text-sm md:text-base">   
 {occupations.map((field, index) => (
-    <label key={index} className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-ss md:text-base mt-1 mb-1 flex items-start">
-      <span><input type="radio" name="speciality" required /></span>
-      <span className="ml-2">{field}</span>
+    <label key={index} name="occupations" className="bg-white border border-gray-300 px-1 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xxs md:text-base mt-1 mb-1 flex items-start">
+      <span><input type="radio" name="occupations" required /></span>
+      <span className="ml-1">{field}</span>
     </label>
   ))}
 </div>
@@ -183,8 +185,8 @@ const SpecialityForm = () => {
 <h1 className="text-2xl font-bold text-gray-600 ml-0 mb-2 speciality-box whitespace-nowrap text-sm md:text-base">Current Level Of Study</h1>
 <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 speciality-box whitespace-nowrap text-sm md:text-base">   
 {study.map((field, index) => (
-    <label key={index} className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 flex items-start">
-      <span><input type="radio" name="speciality" required /></span>
+    <label key={index} name="study" className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 flex items-start">
+      <span><input type="radio" name="study" required /></span>
       <span className="ml-2">{field}</span>
     </label>
   ))}
