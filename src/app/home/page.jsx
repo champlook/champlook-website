@@ -11,7 +11,9 @@ export default function Home() {
   console.log("user in home page", user);
 
   return (
+    
     <div className=" bg-gray-300 h-auto text-[1rem] text-black font-avnext ">
+
       <div>
         <Navbar title="home" />
         <ContentSection />

@@ -1,9 +1,20 @@
 // components/SpecialityForm.js
 
 
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
+import { db } from '@/app/Firebase-config';
+import {doc,setDoc} from 'firebase/firestore'
+import { useUserContext } from "@/app/Context/UserContext";
+
+
 
 const SpecialityForm = () => {
     // Array to store the field data
+
+
+    
     const fields = [
       'Front-end developer',
       'Full-stack developer',
@@ -64,7 +75,118 @@ const SpecialityForm = () => {
       // Array for year options
       const years = Array.from({ length: 10 }, (_, index) => new Date().getFullYear() - index);
     
-    
+     const [spe,setSpe]=useState("")
+     const [hack,setHack]=useState([])
+     const [text,setText]=useState("")
+     
+   
+
+     const selectSpecification=(e)=>{
+        setSpe(e.target.value);
+     }
+
+
+     
+     const handleHack=(e)=>
+     {
+        let isSelected=e.target.checked;
+        let value=e.target.value;
+         if(isSelected)
+         {
+          setHack([...hack,value]);
+         }         
+         else{
+          setHack((pd)=>{
+           return pd.filter((type)=>{
+            return type!==value
+           })
+          })
+         }
+
+     }
+
+
+const texthandle=(e)=>{
+setText(e.target.value)
+}
+
+const [loc,setLoc]=useState("")
+const handleLocation=(e)=>{
+setLoc(e.target.value);
+}
+
+const [occup,setOccup]=useState("")
+const handleOccupation=(e)=>
+{
+  setOccup(e.target.value);
+}
+const [studys,setStudys]=useState("")
+const handleStudy=(e)=>{
+setStudys(e.target.value);
+}
+
+const [school,setSchool]=useState("")
+const handleSchool=(e)=>{
+setSchool(e.target.value);
+}
+const [gmonth,setGmonth]=useState("")
+const [gyear,setGyear]=useState("")
+
+const handlegmonth=(e)=>{
+  setGmonth(e.target.value);
+}
+const handlegyear=(e)=>{
+  setGyear(e.target.value);
+}
+
+const [bmonth,setBmonth]=useState("")
+const [byear,setByear]=useState("")
+
+const handlebmonth=(e)=>{
+  setBmonth(e.target.value);
+}
+const handlebyear=(e)=>{
+  setByear(e.target.value);
+}
+
+const user = useUserContext();
+  const router = useRouter();
+
+     const submit=async()=>{
+
+
+      // console.log(spe)
+      // console.log(text)
+      // console.log(hack);
+      // console.log(loc);
+      // console.log(occup)
+      // console.log(studys)
+      // console.log(school)
+      // console.log(gmonth);
+      // console.log(gyear)
+      // console.log(bmonth)
+      // console.log(byear)
+
+      
+        await setDoc(doc(db, "preferences", user.uid), {
+          uid: user.uid,
+          Specality: spe,
+          YourSkills: text,
+          HackathonType: hack,
+          Location: loc,
+          Occupation: occup,
+          StudyLevel: studys,
+          SchoolName: school,
+          GraduationMonth: gmonth,
+          GraduationYear: gyear,
+          BirthdayMonth: bmonth,
+          BirthdayYear: byear
+        });
+       
+
+      
+      router.push("/home");
+     }
 
   return (
 
@@ -77,7 +199,7 @@ const SpecialityForm = () => {
       <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 speciality-box whitespace-nowrap text-sm  sm:text-ss">   
   {fields.map((field, index) => (
     <label key={index} className="bg-white border border-customgray shadow px-3 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xxs md:text-base mt-1 mb-1 py-1 flex items-start">
-      <span><input type="radio" name="speciality" required /></span>
+      <span><input type="radio" name="speciality"  value={field} required onChange={selectSpecification} /></span>
       <span className=" ml-1"> 
           {field}
         </span>
@@ -94,7 +216,7 @@ const SpecialityForm = () => {
             </h2>
           
               <textarea
-                  
+                  onChange={texthandle}
                    name="skills"
                    placeholder="Languages, Databases, Framework, APIs, and Other tools"
                    required
@@ -116,7 +238,7 @@ const SpecialityForm = () => {
   {hackathonTypes.map((type, index) => (
     
     <label key={index} className="bg-white border border-customgray shadow px-2 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 flex items-start">
-     <span><input type="checkbox" name="speciality" required /></span> 
+     <span><input type="checkbox" name="speciality" chacked={hack.includes(type)} value={type} required onChange={handleHack}  /></span> 
       
       <span className="ml-2">{type}</span>
     
@@ -163,8 +285,8 @@ const SpecialityForm = () => {
         </h1>
     <h2 class="block mb-2 text-sm font-bold text-gray-600 ">Location</h2>
     
-    <input type="text" id="default-input" required className="bg-white border border-gray-300 text-customcolor text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block min-w:264px max-w:400px p-2.5" style={{ minWidth: '260px', maxWidth: '400px' }}/>
-    
+    <input type="text" id="default-input" required onChange={handleLocation} className="bg-white border border-gray-300 text-customcolor text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block min-w:264px max-w:400px p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ minWidth: '260px', maxWidth: '400px' }}/>
+
   </div>
 
 
@@ -173,7 +295,7 @@ const SpecialityForm = () => {
 <div className="grid gap-4 grid-cols-2 text-sm md:text-base">   
 {occupations.map((field, index) => (
     <label key={index} name="occupations" className="bg-white border border-gray-300 px-1 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xxs md:text-base mt-1 mb-1 flex items-start">
-      <span><input type="radio" name="occupations" required /></span>
+      <span><input type="radio" name="occupations" value={field} required onChange={handleOccupation} /></span>
       <span className="ml-1">{field}</span>
     </label>
   ))}
@@ -186,7 +308,7 @@ const SpecialityForm = () => {
 <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 speciality-box whitespace-nowrap text-sm md:text-base">   
 {study.map((field, index) => (
     <label key={index} name="study" className="bg-white border border-gray-300 px-3 py-1 rounded-md cursor-pointer text-customcolor speciality-box whitespace-nowrap text-xs md:text-base mt-1 mb-1 flex items-start">
-      <span><input type="radio" name="study" required /></span>
+      <span><input type="radio" name="study" required value={field} onChange={handleStudy} /></span>
       <span className="ml-2">{field}</span>
     </label>
   ))}
@@ -204,13 +326,13 @@ const SpecialityForm = () => {
           required
           className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base w-full text-gray-400"
           style={{ minWidth: '200px' }}
-          placeholder="Select a field"
+          placeholder="Select a field" onChange={handleSchool} value={school}
         >
           <option value="" disabled selected>
             Select a school
           </option>
           {hackathonTypes.map((type, index) => (
-            <option key={index} value={type}>
+            <option key={index} value={type} >
               {type}
             </option>
           ))}
@@ -229,13 +351,13 @@ const SpecialityForm = () => {
             name="graduation-month"
             id="graduation-month"
             required
-            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base text-customblack"
+            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base text-customblack" onChange={handlegmonth} value={gmonth}
           >
-            <option value="" disabled selected>
+            <option value=""  selected >
               Month
             </option>
             {months.map((month, index) => (
-              <option key={index} value={month}>
+              <option key={index} value={month} >
                 {month}
               </option>
             ))}
@@ -245,13 +367,13 @@ const SpecialityForm = () => {
             name="graduation-year"
             id="graduation-year"
             required
-            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base ml-2 text-customblack"
+            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base ml-2 text-customblack" onChange={handlegyear} value={gyear}
           >
             <option value="" disabled selected>
               Year
             </option>
             {years.map((year, index) => (
-              <option key={index} value={year}>
+              <option key={index} value={year} >
                 {year}
               </option>
             ))}
@@ -270,13 +392,13 @@ const SpecialityForm = () => {
             name="graduation-month"
             id="graduation-month"
             required
-            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base text-customblack"
+            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base text-customblack" onChange={handlebmonth} value={bmonth}
           >
             <option value="" disabled selected>
               Month
             </option>
             {months.map((month, index) => (
-              <option key={index} value={month}>
+              <option key={index} value={month} >
                 {month}
               </option>
             ))}
@@ -286,13 +408,13 @@ const SpecialityForm = () => {
             name="graduation-year"
             id="graduation-year"
             required
-            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base ml-2 text-customblack"
+            className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base ml-2 text-customblack" onChange={handlebyear} value={byear}
           >
             <option value="" disabled selected>
               Year
             </option>
             {years.map((year, index) => (
-              <option key={index} value={year}>
+              <option key={index} value={year} >
                 {year}
               </option>
             ))}
@@ -306,7 +428,7 @@ const SpecialityForm = () => {
 
 
 
-<button className=" mx-1 mb-20 bg-[#D81F1F] text-white p-2 pr-5 pl-5 hover:bg-red-600 ">
+<button className=" mx-1 mb-20 bg-[#D81F1F] text-white p-2 pr-5 pl-5 hover:bg-red-600 " onClick={submit}>
   Continue
 </button>
 
