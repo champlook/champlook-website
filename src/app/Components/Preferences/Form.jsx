@@ -265,12 +265,13 @@ const user = useUserContext();
           className="border border-gray-300 p-2 rounded-md speciality-box text-sm md:text-base w-full text-customcolor"
           style={{ minWidth: '200px' }}
           placeholder="Select a field"
+          onChange={handleHack} value={hack}
         >
-          <option value="" disabled selected>
+          <option value=""  selected>
             Select a field
           </option>
           {hackathonTypes.map((type, index) => (
-            <option key={index} value={type}>
+            <option key={index} value={type} >
               {type}
             </option>
           ))}
