@@ -231,8 +231,8 @@ main {
     position: absolute!important ;
     flex-direction: column !important;
     width: 100%;
-    height: 25rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    height:100vh;
+    background-color: rgba(5, 5, 5, 0.9);
     justify-content: center !important;
     top: 4.5rem;
     left: 0%;
@@ -244,8 +244,10 @@ main {
     flex-direction: column;
     position: absolute;
     text-align: center;
-    top: 2rem;
-    left: 35%;
+    top: 20vh;
+    left: 50%;
+    width: 5rem;
+    padding-right: 14px;
     
   }
   .blog
@@ -254,8 +256,9 @@ main {
     flex-direction: column;
     position: absolute;
     text-align: center;
-    top: 4rem;
-    left: 35%;
+    top: 27vh;
+    padding-right: 2px;
+    left: 51%;
   }
   .login
   {
@@ -263,8 +266,8 @@ main {
     flex-direction: column;
     text-align: center;
     position: absolute;
-    top: 10rem;
-    left: 32%;
+    top: 44vh;
+    left: 44%;
   }
   .join
   {
@@ -272,8 +275,8 @@ main {
     flex-direction: column;
     text-align: center;
     position: absolute;
-    top: 14rem;
-    left: 32%;
+    top: 57vh;
+    left: 44%;
   }
   .aboutus
   {
@@ -281,8 +284,8 @@ main {
     flex-direction: column;
     position: absolute;
     text-align: center;
-    top: 7rem;
-    left: 35%;
+    top: 35vh;
+    left: 48%;
   }
 
 
@@ -307,6 +310,7 @@ padding-right: 1rem;
   margin: auto;
    /* margin-left: 1rem; */
    width: 100%;
+   padding-left: 0rem;
  }
  .foot-right
  {
@@ -327,4 +331,97 @@ padding-right: 1rem;
  {
   margin-top: 1rem;
  }
+ .cpdiv
+ {
+  padding-left: 0rem;
+ }
+}
+
+
+@media (min-width:300px) and (max-width:500px) {
+  .nav-width
+  {
+     width: 100%;
+     height: 4.5rem;
+  }
+  .nav-res
+  {
+    display: none;
+    /* top: 30rem; */
+    /* top: -5rem; */
+    /* left: -100rem; */
+
+  }
+  .nav-res-logo
+  {
+    left: 1.3rem;
+  }
+  .nav-cont
+  {
+    display: block;
+    /* width: 5rem; */
+  }
+  .active
+  {
+    display:flex;
+    z-index: 1;
+    position: absolute!important ;
+    flex-direction: column !important;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(5, 5, 5, 0.9);
+    justify-content: center !important;
+    top: 4.5rem;
+    left: 0%;
+    color: white;
+  }
+  .home
+  {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 20vh;
+    left: 25%;
+    width: 5rem;
+    padding-right: 14px;
+    
+  }
+  .blog
+  {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 27vh;
+    padding-right: 2px;
+    left: 26%;
+  }
+  .login
+  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 44vh;
+    left: 20%;
+  }
+  .join
+  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 57vh;
+    left: 20%;
+  }
+  .aboutus
+  {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 35vh;
+    left: 23%;
+  }
 }

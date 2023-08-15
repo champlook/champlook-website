@@ -16,9 +16,9 @@ export const ContentSection = () => {
 
   return (
     <>
-      <div class=" bg-white">
-        <div class="grid grid-cols-1 max-[640px]:hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto bg-white max-w-[50%] rounded-md border-black border-2 text-[2rem]  break-word font-semibold leading-[125%] text-center">
-          <div class="text-white bg-red rounded-md">Discover</div>
+      <div className=" bg-white">
+        <div className="grid grid-cols-1 max-[640px]:hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto bg-white max-w-[50%] rounded-md border-black border-2 text-[2rem]  break-word font-semibold leading-[125%] text-center">
+          <div className="text-white bg-red rounded-md">Discover</div>
           <div>Hackathon</div>
           <div>Fellowship</div>
         </div>

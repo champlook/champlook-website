@@ -1,7 +1,7 @@
 "use client";
 import { Blog } from "../Components/Home/Blog";
 import { ContentSection } from "../Components/Home/ContentSection";
-import { Footer } from "../Components/Home/Footer";
+import { Footer } from "../Components/Blog/Footer";
 import { Navbar } from "../Components/Home/Navbar";
 import { useContext, useEffect } from "react";
 import { useUserContext } from "../Context/UserContext";
@@ -18,7 +18,7 @@ export default function Home() {
         {/* <Navbar title="home" /> */}
         <ContentSection />
         <Blog />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
