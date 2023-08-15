@@ -27,7 +27,7 @@ export const Navbar = ({children,title}) => {
       </Link>
       <div className="hidden nav-cont  flex-row float-right space-x-4 mr-[1.5rem] mt-[1.6rem]">
 
-      <p className="float-left text-red">Signin</p>
+      <p className="float-left text-red font-semibold">Signin</p>
        <button onClick={showNavbar}><FontAwesomeIcon  icon={faBars} className="float-right"/> </button>
       </div>
       </div>

@@ -310,6 +310,7 @@ padding-right: 1rem;
   margin: auto;
    /* margin-left: 1rem; */
    width: 100%;
+   padding-left: 0rem;
  }
  .foot-right
  {
@@ -329,6 +330,10 @@ padding-right: 1rem;
  .foot-cp-p
  {
   margin-top: 1rem;
+ }
+ .cpdiv
+ {
+  padding-left: 0rem;
  }
 }
 
