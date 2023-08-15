@@ -3,10 +3,10 @@ import React from "react";
 const Report = () => {
   return (
     <>
-      <div className=" font-avnext text-[#D81F1F] font-bold text-3xl mt-[2rem]">
-        Always report
-      </div>
-      <hr className="mb-2 border border-t-2 border-gray-200" />
+
+        <div className=" font-avnext text-[#D81F1F] font-bold text-3xl mt-[2rem]" >Always report</div>
+        <hr className='mb-2 border border-t-2 border-gray-200'/>
+
 
       <div className="leading-8 mt-2rem">
         If you witness any violations of this Code of Conduct, encounter
@@ -20,4 +20,7 @@ const Report = () => {
   );
 };
 
-export default Report;
+
+export default Report
+
+
