@@ -281,13 +281,13 @@ const user = useUserContext();
 
 
       <div class="mb-3 mt-4 flex items-start flex-col w-full ">
-      <h1 className="text-xl font-extrabold text-black mb-2 speciality-box text-xl">
+      <h1 className="text-xl font-bold text-black mb-2 speciality-box text-xl">
           Eligibility 
         </h1>
     <h2 class="block mb-2 text-sm font-bold text-gray-600 ">Location</h2>
     
     <input type="text" id="default-input" required onChange={handleLocation} className="bg-white border border-gray-300 text-customcolor text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block min-w:264px max-w:400px p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ minWidth: '260px', maxWidth: '400px' }}/>
-    
+
   </div>
 
 
