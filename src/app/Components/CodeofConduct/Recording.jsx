@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const Recording = () => {
   return (
+
    <>
     <div className=" font-avnext text-[#D81F1F] font-bold text-3xl mt-[2rem]" >No recording without consent</div>
     <hr className='mb-2 border border-t-2 border-gray-200'/>
@@ -12,3 +13,4 @@ const Recording = () => {
 }
 
 export default Recording
+

@@ -1,9 +1,10 @@
-import React from 'react'
-import homeicon from "./images/homeicon.svg"
-import mailicon from "./images/mailicon.svg"
-import Image from 'next/image'
+import React from "react";
+import homeicon from "./images/homeicon.svg";
+import mailicon from "./images/mailicon.svg";
+import Image from "next/image";
 
 const Footer = (props) => {
+
     return (
         <>
             <div className=" font-avnext text-[#00005C] font-bold text-3xl mt-[2rem]" >Contact Us</div>
@@ -43,9 +44,13 @@ const Footer = (props) => {
 
 
                 </div>
-            </div>
-        </>
-    )
-}
 
-export default Footer
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Footer;

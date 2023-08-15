@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Applicability = () => {
   return (
     <>
+
     <div className=" font-avnext text-[#D81F1F] font-bold text-3xl pt-8" >Applicability</div>
     <hr className='mb-2 border border-t-2 border-gray-200'/>
     
@@ -17,11 +18,14 @@ const Applicability = () => {
         <li>Workshops</li>
         <li>Parties and social events</li>
         <li>Social media channels, etc.</li>
-    </ul>
+      </ul>
 
-    <h3 className='mt-[2rem]'>This Code of Conduct also extends to sponsors, partners, and all projects created during the hackathon</h3>
+      <h3 className="mt-[2rem]">
+        This Code of Conduct also extends to sponsors, partners, and all
+        projects created during the hackathon
+      </h3>
     </>
-  )
-}
+  );
+};
 
-export default Applicability
+export default Applicability;
