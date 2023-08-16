@@ -71,8 +71,8 @@ export const Blog = () => {
           />
         </div>
       </button> */}
-        <div className="flex items-center justify-center pt-6 ">
-          <button className="text-[1.5rem] leading-[125%] w-auto px-6 py-3 bg-white shadow-xl m-4 text-black font-bold rounded-md">
+        <div className="flex items-center justify-center pr-3 m-auto mt-4 mb-4 font-extrabold text-[1.50rem] bg-white rounded-md shadow-xl max-w-min">
+          <button className="text-[1.5rem] leading-[125%] w-auto px-6    m-4 text-black font-bold ">
             Next
           </button>
           <Image

@@ -44,7 +44,7 @@ const CountdownTimer = ({ targetTime }) => {
 //   50d : 11h : 14m
   return (
     <div>
-      {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}seconds
+      {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
     </div>
   );
 };
