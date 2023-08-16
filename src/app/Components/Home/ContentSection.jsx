@@ -2,6 +2,7 @@
 import Image from "next/image";
 // import banner from "./images/banner.svg";
 import banner from "./images/banner.jpg";
+import joinusarrow from "./images/joinusarrow.svg";
 import twittericon from "./images/twittericon.jpg";
 import linkedinicon from "./images/linkedinicon.jpg";
 import linkicon from "./images/linkicon.jpg";
@@ -16,13 +17,26 @@ export const ContentSection = () => {
 
   return (
     <>
-      <div className=" bg-white">
-        <div className="grid grid-cols-1 max-[640px]:hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 m-auto bg-white max-w-[50%] rounded-md border-black border-2 text-[2rem]  break-word font-semibold leading-[125%] text-center">
-          <div className="text-white bg-red rounded-md">Discover</div>
+      {/* <div className="bg-white ">
+      
+        <div className="grid  sm:max-[1000px]:grid-cols-2 max-[640px]:hidden  sm:grid gap-4 m-auto bg-white max-w-[50%] rounded-md border-black border-2 text-[2rem]  break-word font-semibold leading-[125%] text-center">
+          <div className="text-white rounded-md bg-red">Discover</div>
           <div>Hackathon</div>
           <div>Fellowship</div>
         </div>
+
+        
+      </div> */}
+      <div className="bg-white">
+        <div className="grid gap-4 max-w-min m-auto bg-white max-[640px]:hidden grid-flow-col border-2 border-black w-auto rounded-md   text-[2rem]   font-semibold leading-[125%] text-center">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> */}
+          <span className="items-stretch object-fill w-auto p-3 text-white rounded-md bg-red">Discover</span>
+          <span className="w-auto p-3 text-black bg-white rounded-md">Hackathon</span>
+          <span className="w-auto p-3 text-black bg-white rounded-md">Fellowship</span>
+        </div>
       </div>
+
+
 
       <div className="bg-[#F5F7F7] pl-[2.81rem] pr-[2.81rem]">
         <div className="sm:hidden text-[2.56rem] leading-[125%]  font-avnextb text-gray-3">
@@ -30,31 +44,40 @@ export const ContentSection = () => {
           <span className="text-red">Hackathon </span>
           <br /> Revolution!
         </div>
+        <div className="inline-flex items-center justify-center bg-[#F5F7F7]">
+          <span className="text-[1.5rem] sm:hidden leading-[150%] m-6  min-w-full px-10 bg-red text-white font-bold rounded-md">
+            Join us
+          </span>
+
+
+
+        </div>
         <div className=" max-[640px]:hidden  pl-[6.88rem]  text-[2.19rem] leading-[125%] font-semibold font-tiehs w-[6.06rem] h-[3.31rem]">
           Now
         </div>
 
         <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
-          <div className="w-[100%] sm:w-[30%]  max-[640px]:mb-5 bg-white text-white h-auto object-cover shadow-lg rounded">
+          <div className="w-[100%] sm:w-[45%] md:w-[50%] lg:w-[30%]  max-[640px]:mb-5 bg-white text-white h-auto object-cover shadow-lg rounded">
             <Image
               // className="  rounded-[10px] w-[42.75rem] p-4 h-stretch object-stretch"
               // className="  rounded-[10px] w-[42.75rem]  h-full  object-cover"
-              className=" w-[40.75rem] min-h-full "
+              className="max-w-full min-h-full"
               alt="Main banner"
               src={banner}
 
-              // width={427.04}
-              // height={603.04}
-              // fillsizes="(max-width: 768px) h-full, (max-width: 1200px) h-full, 100vh"
-              // w-[42.75rem] h-[24.19rem] object-cover
+            // width={427.04}
+            // height={603.04}
+            // fillsizes="(max-width: 768px) h-full, (max-width: 1200px) h-full, 100vh"
+            // w-[42.75rem] h-[24.19rem] object-cover
             />
           </div>
-          <div className="w-[100%]  sm:w-[70%]  bg-white p-10  sm:ml-8 h-auto shadow-lg rounded mr-[1rem]">
-            <div className="flex flex-col items-center sm:flex-row  justify-between sm:items-start text-[2.56rem] leading-[125%] font-avnextb text-gray-3">
-              <b className="text-2.56rem leading-[125%] font-avnextb text-gray-3 max-[990px]:block">
+          <div className="w-[100%] sm:w-[55%] md:w-[50%] lg:w-[70%]  bg-white p-10  sm:ml-8 h-auto shadow-lg rounded mr-[1rem]">
+            {/* <div className="flex flex-col items-center sm:flex-row  justify-between sm:items-start text-[2.56rem] leading-[125%] font-avnextb text-gray-3">
+
+              <b className="text-2.56rem leading-[125%] font-avnextb text-gray-3 ">
                 Hackathon 2015
               </b>
-              <div className="flex flex-wrap justify-center mt-4 sm:justify-start sm:mt-0 ">
+              <div className="flex flex-wrap justify-between mt-4 sm:justify-start sm:mt-0 ">
                 <Image
                   className="w-[3.75rem] h-[3.75rem] m-2"
                   alt=""
@@ -71,6 +94,33 @@ export const ContentSection = () => {
                   src={linkicon}
                 />
               </div>
+            </div> */}
+
+
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <span className="sm:items-start text-[2.56rem] leading-[125%] font-avnextb text-gray-3">
+                <b className="text-2.56rem leading-[125%] font-avnextb text-gray-3 ">
+                  Hackathon 2015
+                </b>
+              </span>
+              <div className="flex justify-around mt-4 sm:mt-0 ">
+                <Image
+                  className="w-[3.75rem] h-[3.75rem] "
+                  alt=""
+                  src={twittericon}
+                />
+                <Image
+                  className="w-[3.75rem] h-[3.75rem] "
+                  alt=""
+                  src={linkedinicon}
+                />
+                <Image
+                  className="w-[3.75rem] h-[3.75rem] "
+                  alt=""
+                  src={linkicon}
+                />
+              </div>
+
             </div>
 
             <div className=" text-[1.13rem] leading-[125%] font-avnextb text-gray-1 text-left  w-[6.69rem] h-[1.63rem]">
@@ -128,17 +178,17 @@ export const ContentSection = () => {
 
               <div className="flex flex-row gap-[0.5rem]">
                 <Image
-                  className="  w-[2.25rem] h-[2.25rem] object-cover "
+                  className="  w-[2.25rem] h-[2.25rem] object-cover  "
                   alt=""
                   src={person1}
                 />
                 <Image
-                  className=" w-[2.25rem] h-[2.25rem] object-cover rounded-lg"
+                  className=" w-[2.25rem] h-[2.25rem] object-cover border-4 -ml-6 border-white rounded-lg"
                   alt=""
                   src={person2}
                 />
                 <Image
-                  className=" w-[2.25rem] h-[2.25rem] object-cover rounded-lg"
+                  className=" w-[2.25rem] h-[2.25rem] object-cover border-4 -ml-6 border-white rounded-lg"
                   alt=""
                   src={person3}
                 />
@@ -163,7 +213,7 @@ export const ContentSection = () => {
             </div>
 
             <div className="flex items-center justify-center">
-              <button className="text-[1.5rem] leading-[125%] w-auto p-2 bg-red text-white font-bold rounded-md">
+              <button className="text-[1.5rem] leading-[125%] w-auto px-12 py-2 bg-red text-white font-bold rounded-md">
                 Apply Now
               </button>
             </div>
@@ -171,7 +221,7 @@ export const ContentSection = () => {
         </div>
 
         <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
-          <div className="w-[100%] sm:w-[75%] p-4 mr-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
+          <div className="w-[100%] sm:w-[70%] p-4 mr-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
             <Image
               className=" w-[42.75rem] h-[24.19rem] object-cover"
               alt=""
@@ -190,7 +240,7 @@ export const ContentSection = () => {
               their innovative ideas to life."
             </div>
           </div>
-          <div className="w-[100%] sm:w-[50%] p-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
+          <div className="w-[100%] sm:w-[30%] p-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
             <div className="text-[2rem] leading-[125%] inline-block  font-avnextb  ">
               Elon Fellowship for budding entrepreneurs
             </div>
@@ -227,15 +277,14 @@ export const ContentSection = () => {
               14th Sept to 14th Oct
             </div>
 
-            <p className="pt-6 m-0">Applications Close in</p>
-            {/* <p className="m-0 text-crimson-100">{`50d : 11h : 14m `}</p> */}
-            <div className="m-0 text-crimson-100">
-              {/* <h1>Countdown Timer</h1> */}
-              <CountdownTimer targetTime={targetTime} />
+            <div className="flex flex-col p-4 mt-6 font-extrabold border-2 text-[1.5rem] border-black rounded-md w-fit bg-[#FAF4F4]">
+              <p className="">Applications Close in</p>
+              <div className="m-0 text-crimson-100">
+                <CountdownTimer targetTime={targetTime} />
+              </div>
             </div>
-
             <div className="flex items-center justify-center">
-              <button className="text-[1.5rem] leading-[125%] w-auto p-2 bg-red text-white font-bold rounded-md">
+              <button className="text-[1.5rem] leading-[125%] m-6 w-auto p-2 bg-red text-white font-bold rounded-md">
                 Apply Now
               </button>
             </div>
