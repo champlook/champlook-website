@@ -100,7 +100,7 @@ export const ContentSection = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <span className="sm:items-start text-[2.56rem] leading-[125%] font-avnextb text-gray-3">
                 <b className="text-2.56rem leading-[125%] font-avnextb text-gray-3 ">
-                  Hackathon 2015
+                  Hackathon 2023
                 </b>
               </span>
               <div className="flex justify-around mt-4 sm:mt-0 ">
@@ -127,7 +127,7 @@ export const ContentSection = () => {
               Hackathon
             </div>
 
-            <div className=" pt-8 text-[1.13rem] leading-[125%]  text-black text-left ">
+            <div className=" pt-8 text-[1.13rem] leading-[125%] font-avnext text-black text-left " >
               ETHIndia grants program is the ethos of a garden of possibilities.
               We believe that with the right resources and support, builders can
               grow and flourish, and their ideas can blossom into something
@@ -139,18 +139,18 @@ export const ContentSection = () => {
               THEME
             </div>
 
-            <div className="flex flex-row text-center pt-9 justify-evenly">
-              <div className=" rounded-xl box-border w-[8.47rem]  h-[2.25rem] border-[2px] border-solid border-whitesmoke-200">
+            <div className="flex flex-row justify-start text-center pt-9">
+              <div className=" rounded-xl box-border w-[8.47rem]  h-[2.25rem] mr-16 border-[2px] border-solid border-whitesmoke-200">
                 <b className="text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkgray text-left">
                   Flutter
                 </b>
               </div>
-              <div className=" rounded-xl box-border w-[8.47rem] h-[2.25rem] border-[2px] border-solid border-whitesmoke-200">
+              <div className=" rounded-xl box-border w-[8.47rem] h-[2.25rem] mr-16 border-[2px] border-solid border-whitesmoke-200">
                 <b className=" text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkgray text-left">
                   Blockchain
                 </b>
               </div>
-              <div className=" rounded-xl box-border w-[8.47rem] h-[2.25rem] border-[2px] border-solid border-whitesmoke-200">
+              <div className=" rounded-xl box-border w-[8.47rem] h-[2.25rem] mr-16 border-[2px] border-solid border-whitesmoke-200">
                 <b className=" text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercase  text-darkgray text-left">
                   24 HR
                 </b>
@@ -167,11 +167,11 @@ export const ContentSection = () => {
             </div> */}
 
             <div className="grid grid-cols-1 gap-10 mt-10 min-[968px]:grid-cols-2">
-              <div>
-                <div className="relative text-[0.88rem] tracking-[1.68px] font-bold  leading-[1rem] uppercase  text-silver text-left">
+              <div className="border-l-8 border-red">
+                <div className="relative text-[0.88rem] tracking-[1.68px] font-bold pl-2 leading-[1rem] uppercase  text-silver text-left">
                   Runs from
                 </div>
-                <div className="relative text-[1.25rem] leading-[1.75rem]  text-darkslategray-200 text-left font-avnextb">
+                <div className="relative text-[1.25rem] leading-[1.75rem] pl-2  text-darkslategray-200 text-left font-avnextb">
                   May 1 - Dec 1, 2023
                 </div>
               </div>
@@ -198,8 +198,8 @@ export const ContentSection = () => {
               </div>
             </div>
 
-            <div className="flex flex-row p-10 text-center justify-evenly">
-              <div className=" rounded-2xl bg-snow-100 w-[5.59rem] h-[2rem]">
+            <div className="flex flex-row justify-start mt-10 mb-5 mr-10 text-center">
+              <div className=" rounded-2xl bg-snow-100 w-[5.59rem] h-[2rem] mr-36">
                 <b className=" text-[0.75rem] tracking-[1.44px] leading-[1rem] uppercasetext-darkslategray-100 text-left font-avnextb">
                   ONLINE
                 </b>
@@ -221,27 +221,28 @@ export const ContentSection = () => {
         </div>
 
         <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
-          <div className="w-[100%] sm:w-[70%] p-4 mr-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
+          <div className="w-[100%] sm:w-[70%] px-20 p-4 mr-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
             <Image
               className=" w-[42.75rem] h-[24.19rem] object-cover"
               alt=""
               src={fellowbanner}
             />
 
-            <div className=" leading-[125%] text-[2rem] font-medium flex items-center w-[11.5rem]  font-avnextr">
+            <div className=" leading-[125%] text-[2rem] font-medium flex items-center w-[11.5rem] pb-4 font-avnextr">
               Introducing
             </div>
             <b className=" text-[2.5rem] leading-[125%]  text-indianred  w-[21.63rem]  font-avnextb">
               Elon Fellowship!
+              <br />
             </b>
-            <div className=" text-[1.5rem] leading-[125%]  w-[44.38rem] contents">
+            <div className="mt-4 text-[1.5rem] leading-[125%]  w-[44.38rem] contents " style={{"word-spacing":"12px"}}>
               "Join the transformative Elon Fellowship, empowering aspiring
               startups with extensive training, funding, and mentorship to bring
               their innovative ideas to life."
             </div>
           </div>
-          <div className="w-[100%] sm:w-[30%] p-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded">
-            <div className="text-[2rem] leading-[125%] inline-block  font-avnextb  ">
+          <div className="w-[100%] sm:w-[30%] p-4 max-[640px]:mb-4 bg-white text-black h-auto shadow-lg rounded-md">
+            <div className="text-[2rem] leading-[125%] inline-block  font-avnextb break-words">
               Elon Fellowship for budding entrepreneurs
             </div>
             <div className="text-[1rem] leading-[125%]  w-[22.25rem] h-[9.31rem] text-gray-1 contents">
@@ -269,12 +270,13 @@ export const ContentSection = () => {
                 src={linkicon}
               />
             </div>
-
-            <div className=" text-[1.13rem] leading-[125%] text-gray-1 pt-6">
+            <div className="pl-4 mt-6 border-l-8 rounded border-red">
+            <div className=" text-[1.13rem] leading-[125%] text-gray-1 ">
               Starts From
             </div>
-            <div className=" leading-[125%] border-l-8 border-red rounded">
+            <div className=" leading-[125%] ">
               14th Sept to 14th Oct
+            </div>
             </div>
 
             <div className="flex flex-col p-4 mt-6 font-extrabold border-2 text-[1.5rem] border-black rounded-md w-fit bg-[#FAF4F4]">
@@ -283,8 +285,8 @@ export const ContentSection = () => {
                 <CountdownTimer targetTime={targetTime} />
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              <button className="text-[1.5rem] leading-[125%] m-6 w-auto p-2 bg-red text-white font-bold rounded-md">
+            <div className="flex items-center justify-start">
+              <button className="text-[1.5rem] leading-[125%] mt-6 px-12 w-auto p-2 bg-red text-white font-bold rounded-md">
                 Apply Now
               </button>
             </div>
