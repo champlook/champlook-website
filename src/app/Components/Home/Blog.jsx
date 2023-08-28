@@ -7,9 +7,9 @@ import Arrow from "./images/Arrow.svg";
 export const Blog = () => {
   return (
     <>
-      <div className="bg-[#F5F7F7] pl-[2.81rem] pr-[2.81rem]">
-        <div className="flex items-center justify-center">
-          <button className="text-[1.5rem] leading-[125%] w-auto px-10 mb-4 shadow-lg bg-white text-black font-bold rounded-md">
+      <div className="bg-[#F5F7F7] pl-[2rem] pr-[2rem] sm:pl-[5rem] sm:pr-[5rem]">
+        <div className="flex items-center justify-center ">
+          <button className="text-[1.5rem] font-avnextb  py-4 w-full sm:w-auto sm:px-28  mb-4 shadow-lg bg-white text-black font-bold rounded-lg">
             BLOGS
           </button>
         </div>
@@ -56,33 +56,43 @@ export const Blog = () => {
             </div>
           ))}
         </div>
-        {/* <button className="cursor-pointer text-center border-none p-0 bg-white m-auto flex flex-center rounded-md shadow-md w-[18.81rem] h-[3.5rem]  mt-8">
-        <div className="flex items-center justify-center text-center">
-          <div className="text-xl font-medium text-center text-black">
-            Next
-          </div>
-          <Image
-            src={Arrow}
-            alt=""
-            width={22}
-            height={22}
-            objectFit="contain"
-            className="ml-2"
-          />
+       
+      <div className="max-[640px]:hidden">
+        <div className="pt-4 pb-6" >
+          <div className="w-[300px] m-auto bg-white rounded-md shadow-xl">
+            <div className="flex items-center justify-center pr-3 m-auto mt-4 font-extrabold text-[1.50rem] max-w-min">
+              <button className="text-[1.5rem] leading-[125%] w-auto px-6   m-4 text-black font-bold ">
+                Next
+              </button>
+              <Image
+                src={Arrow}
+                alt=""
+                width={22}
+                height={22}
+                objectFit="contain"
+                className="ml-2 bg-white"
+              />
+            </div>
+          </div>          
         </div>
-      </button> */}
-        <div className="flex items-center justify-center pr-3 m-auto mt-4 mb-4 font-extrabold text-[1.50rem] bg-white rounded-md shadow-xl max-w-min">
-          <button className="text-[1.5rem] leading-[125%] w-auto px-6    m-4 text-black font-bold ">
-            Next
-          </button>
-          <Image
-            src={Arrow}
-            alt=""
-            width={22}
-            height={22}
-            objectFit="contain"
-            className="ml-2 bg-white"
-          />
+        </div>
+
+        <div className="pt-4 pb-6 sm:hidden">
+          <div className="w-full bg-white rounded-md shadow-xl">
+            <div className="flex items-center justify-center pr-3 m-auto mt-4 font-extrabold text-[1.50rem]  max-w-min">
+              <button className="text-[1.5rem] leading-[125%] w-auto px-6   m-4 text-black font-bold ">
+                Next
+              </button>
+              <Image
+                src={Arrow}
+                alt=""
+                width={22}
+                height={22}
+                objectFit="contain"
+                className="ml-2 bg-white"
+              />
+            </div>
+          </div>          
         </div>
       </div>
     </>
