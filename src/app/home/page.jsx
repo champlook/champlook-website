@@ -15,7 +15,7 @@ export default function Home() {
     <div className=" bg-gray-300 h-auto text-[1rem] text-black font-avnext ">
 
       <div>
-        {/* <Navbar title="home" /> */}
+        <Navbar title="home" />
         <ContentSection />
         <Blog />
         <Footer />
