@@ -2,7 +2,6 @@
 import Image from "next/image";
 // import banner from "./images/banner.svg";
 import banner from "./images/banner.jpg";
-import joinusarrow from "./images/joinusarrow.svg";
 import twittericon from "./images/twittericon.jpg";
 import linkedinicon from "./images/linkedinicon.jpg";
 import linkicon from "./images/linkicon.jpg";
@@ -35,16 +34,8 @@ export const ContentSection = () => {
           <span className="text-red">Hackathon </span>
           <br /> Revolution!
         </div>
-        <div className="inline-flex items-center justify-center bg-[#F5F7F7]">
-          <span className="text-[1.5rem] sm:hidden leading-[150%] m-6  min-w-full px-10 bg-red text-white font-bold rounded-md">
-            Join us
-          </span>
-
-
-
-        </div>
         <div className=" max-[640px]:hidden  pl-[6.88rem]  text-[2.19rem] leading-[125%] font-semibold font-tiehs w-[6.06rem] h-[3.31rem]">
-          Now
+          Now`
         </div>
 
         <div className="flex  justify-evenly  pb-[4rem] flex-col  sm:flex-row">
@@ -84,7 +75,6 @@ export const ContentSection = () => {
                   src={linkicon}
                 />
               </div>
-
             </div>
 
             <div className=" text-[1.13rem] max-[640px]:hidden leading-[125%] font-avnextb text-gray-1 text-left  w-[6.69rem] h-[1.63rem]">
@@ -140,17 +130,17 @@ export const ContentSection = () => {
 
               <div className="flex flex-row gap-[0.5rem]">
                 <Image
-                  className="  w-[2.25rem] h-[2.25rem] object-cover  "
+                  className="  w-[2.25rem] h-[2.25rem] object-cover "
                   alt=""
                   src={person1}
                 />
                 <Image
-                  className=" w-[2.25rem] h-[2.25rem] object-cover border-4 -ml-6 border-white rounded-lg"
+                  className=" w-[2.25rem] h-[2.25rem] object-cover rounded-lg"
                   alt=""
                   src={person2}
                 />
                 <Image
-                  className=" w-[2.25rem] h-[2.25rem] object-cover border-4 -ml-6 border-white rounded-lg"
+                  className=" w-[2.25rem] h-[2.25rem] object-cover rounded-lg"
                   alt=""
                   src={person3}
                 />

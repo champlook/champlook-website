@@ -18,6 +18,7 @@ export default function Login() {
     router.push("/signup");
   };
 
+ 
   return (
     <div className="bg-gray-200 w-full h-screen pt-24 pb-4 login-bg">
        {/* <div className="w-full h-24 ">
