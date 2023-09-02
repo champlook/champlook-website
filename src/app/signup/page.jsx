@@ -57,13 +57,13 @@ export default function page() {
   };
 
   return (
-    <div className="h-full flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center justify-center h-full">
       <div className="w-[14.25rem] h-[4.69rem] mt-10 ">
         <Image src={img1} />
       </div>
       <div className="mt-7">
         <form action="">
-          <div className=" flex flex-col justify-start ">
+          <div className="flex flex-col justify-start ">
             <label htmlFor="FullName">Full Name</label>
             <input
               type="text"
@@ -77,7 +77,7 @@ export default function page() {
       </div>
       <div className="mt-2">
         <form action="">
-          <div className=" flex flex-col justify-start ">
+          <div className="flex flex-col justify-start ">
             <label htmlFor="setaUsername">Set a Username</label>
             <input
               type="text"
@@ -91,7 +91,7 @@ export default function page() {
       </div>
       <div className="mt-2">
         <form action="">
-          <div className=" flex flex-col justify-start ">
+          <div className="flex flex-col justify-start ">
             <label htmlFor="setaPassword">Set a Password</label>
             <input
               type="text"
@@ -107,7 +107,7 @@ export default function page() {
         <label htmlFor="">Select Gender</label>
         <div className="h-[50px]">
           <Select
-            className="basic-single   mt-2"
+            className="mt-2 basic-single"
             classNamePrefix="select"
             name="Select"
             isClearable={false}
@@ -126,10 +126,10 @@ export default function page() {
         </div>
       </div>
       <div className="mt-10 w-[21.5rem] flex justify-center items-center h-[40px]">
-        <div className="w-1/5 flex items-center justify-center">
+        <div className="flex items-center justify-center w-1/5">
           <Image src={img2} height={26} />
         </div>
-        <div className="font-avnextr w-full font-bold text-sm">
+        <div className="w-full text-sm font-bold font-avnextr">
           I want to receive email updates for the upcoming hackthons and
           initiatives.
         </div>
@@ -147,7 +147,7 @@ export default function page() {
           Terms of use{" "}
         </Link>{" "}
         and
-        <Link href="/privacy-policy" className="underline ml-2">
+        <Link href="/privacy-policy" className="ml-2 underline">
           privacy policy.
         </Link>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 import { Blog } from "../Components/Home/Blog";
 import { ContentSection } from "../Components/Home/ContentSection";
-import { Footer } from "../Components/Home/Footer";
+import { Footer } from "../Components/Blog/Footer";
 import { Navbar } from "../Components/Home/Navbar";
 import { useContext, useEffect } from "react";
 import { useUserContext } from "../Context/UserContext";
@@ -11,7 +11,9 @@ export default function Home() {
   console.log("user in home page", user);
 
   return (
+    
     <div className=" bg-gray-300 h-auto text-[1rem] text-black font-avnext ">
+
       <div>
         <Navbar title="home" />
         <ContentSection />
