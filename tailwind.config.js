@@ -12,7 +12,10 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-
+      screens:{
+         "ms":"318px",
+         "ml":"400px",
+      },
       colors: {
         whitesmoke: {
           100: "#f5f7f7",
