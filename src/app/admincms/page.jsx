@@ -2,9 +2,14 @@
 "use client"
 import Image from "next/image";
 import logo from "../Components/CodeofConduct/images/logo.svg";
+import { Storage } from "../Firebase-config";
+import {ref,uploadBytes,getDownloadURL,uploadBytesResumable} from 'firebase/storage'
+import { useEffect, useRef, useState } from 'react';
+import { useRouter } from "next/navigation";
+import { db } from "../Firebase-config";
+import { collection,addDoc } from "firebase/firestore";
 
 
-import { useState } from 'react';
 
 const Admin = () => {
   const [heading, setHeading] = useState('');
@@ -12,7 +17,23 @@ const Admin = () => {
   const [date, setDate] = useState('');
   const [authorName, setAuthorName] = useState('');
   const [image, setImage] = useState(null);
-  const [authorImage, setAuthorImage] = useState(null);
+  const useref=useRef(null);
+  const use2ref=useRef(null);
+  // const [authorImage, setAuthorImage] = useState(null);
+  const [imageurl,setImageUrl] =useState("");
+  // const [authorurl,setAuthorUrl]=useState("");
+  const [prog,setprog]=useState(0);
+
+  const [items, setItems] = useState(null);
+
+useEffect(() => {
+  const items = JSON.parse(sessionStorage.getItem('Admin'));
+  if (items) {
+   setItems(items);
+  }
+}, []);
+
+  const router=useRouter();
 
   const handleHeadingChange = (e) => {
     setHeading(e.target.value);
@@ -35,28 +56,98 @@ const Admin = () => {
     setImage(selectedImage);
   };
 
-  const handleAuthorImageUpload = (e) => {
-    const selectedAuthorImage = e.target.files[0];
-    setAuthorImage(selectedAuthorImage);
-  };
+  // const handleAuthorImageUpload = (e) => {
+  //   const selectedAuthorImage = e.target.files[0];
+  //   setAuthorImage(selectedAuthorImage);
+  // };
 
-  const handleSubmit = (e) => {
+
+
+
+  const uploadimage= (e)=>{
     e.preventDefault();
+    if(image!=null)
+    {
+    const imageref=ref(Storage, `images/${image.name}`);
+    const uploadTask=  uploadBytesResumable(imageref,image);
+   uploadTask.on
+   (
+     "state_changed",(snapshot)=>{
+      const progress=Math.round((snapshot.bytesTransferred/snapshot.totalBytes)*100); 
+  // console.log(progress);
+  setprog(progress);
+      },
 
-    // Handle form submission, e.g., send data to an API or save it to a database
-    // You can use libraries like Axios or fetch to send data to a server.
-    // Don't forget to handle image uploads as well.
+      (err)=>{console.log(err)},
 
-    console.log('Heading:', heading);
-    console.log('Content:', content);
-    console.log('Date:', date);
-    console.log('Author Name:', authorName);
-    console.log('Image:', image);
-    console.log('Author Image:', authorImage);
+     ()=>{
+            getDownloadURL(uploadTask.snapshot.ref).then(url=>{
+            console.log(url);
+            setImageUrl(url)
+          })
+         }
+   )
+   useref.current.classList.toggle("hidden");
+   use2ref.current.classList.toggle("hidden");
+        }
+        else{
+          alert('Please select an image');
+        }
+  }
+
+
+  // const uploadauthorimage=async()=>{
+  //   const imageref=ref(Storage, `author/${authorImage.name}`);
+  //   const uploadtask= await uploadBytes(imageref,authorImage).then(
+  //     getDownloadURL(imageref).then(url=>setAuthorUrl(url))
+  //   );
+   
+   
+  // }
+
+
+  const AddDoc=()=>{
+    const docref=collection(db,"blogs");
+    // if(heading!=null && content!=null && date!=null && authorName!=null && imageurl!=null)
+    // {
+
+    
+    const data={
+      title: heading , 
+       description : content, 
+       date: date,
+       authorName: authorName,
+       imageUrl : imageurl, 
+      //  authorUrl : "data not entered"
+    }
+    addDoc(docref, data)
+.then(docRef => {
+    // console.log("Document has been added successfully");
+    alert("Data added Successfully");
+})
+    // }
+    // else{
+    //   alert('Please fill all the fields');
+    // }
+
+  }
+
+
+
+
+  const handleSubmit =(e) => {
+    // e.preventDefault();
+
+    
+  
+  
+   AddDoc();
+
   };
 
-  return (
-    // <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: 'linear-gradient(to bottom, #f7f7f7, #e3e3e3)' }}>
+  return (<>{items?
+ 
+    
     <div
     style={{
       display: 'flex',
@@ -91,7 +182,7 @@ const Admin = () => {
           borderRadius: '10px',
           boxShadow: '0px 0px 10px rgba(0,0,0,0.2)',
         }}
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
       >
         <div>
           <label htmlFor="heading">Blog Heading:</label>
@@ -195,12 +286,12 @@ const Admin = () => {
     />
   )}
 </div>
-
+<span className="text-black text-center ml-48 hidden" ref={useref}><progress value={prog} max="100"> {prog}</progress><span> {prog}%</span> </span>
 
 
         
 
-<div>
+{/* <div>
   <label htmlFor="authorImage">Author Image:</label>
   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
     <label
@@ -254,17 +345,18 @@ const Admin = () => {
       style={{ maxWidth: '100%', maxHeight: '200px', marginBottom: '10px' }}
     />
   )}
-</div>
+</div> */}
 
-
+<button onClick={uploadimage}  className="text-lg  mt-6 px-12 w-auto p-2 bg-red text-white font-bold font-avnextb rounded-lg mr-5 ml-[5.5rem]">Upload</button>
 
         {/* <button type="submit" className="mr-auto flex flex-row justify-items-center text-[25px]">Submit</button> */}
-        <button type="submit" className="text-[1.5rem] leading-[125%] mt-6 px-12 w-auto p-2 bg-red text-white font-bold rounded-lg">
+        <button  onClick={handleSubmit} type="submit" className="text-lg hidden  mt-6 px-12 w-auto p-2 bg-red text-white font-bold rounded-lg" ref={use2ref}>
                 Submit
         </button>
+        {/* <span>{imageurl}</span> */}
       </form>
-    </div>
-  );
-};
+    </div>:<div className="text-center text-base border rounded-md w-1/3 h-80 ml-[32rem] mt-[10rem] bg-gray-200 pt-[9rem]"><h2>Please login as<a href="/admin" className="text-blue-400"> admin</a></h2></div>
+ } </>) ;
+  };
 
 export default Admin;
