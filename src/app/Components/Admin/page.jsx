@@ -2,21 +2,63 @@
 import Image from "next/image";
 import img1 from "src/app/Components/Home/images/logo.svg";
 import { useState } from "react";
+import { db } from "@/app/Firebase-config";
+import {doc,getDoc} from 'firebase/firestore'
+import { useUserContext } from "@/app/Context/UserContext";
+import { useRouter } from "next/navigation";
 
 
 const Admin = () => {
+
+
+  class ValidationError extends Error {
+    constructor(message) {
+      super(message);
+      this.name = "ValidationError";
+    }
+  }
  
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
-  console.log(UserName);
+  // console.log(UserName);
+  const user=useUserContext();
+  const router = useRouter();
+  const [errormsg, setErrormsg]=useState("");
   
   const handleSubmit = async () => {
     if (
       (!UserName && !Password) || !UserName ||!Password ) {
       console.log("Input data not filled");
+      alert("Data is not filled");
+    
     }
     else{
       console.log("data filled");
+      console.log(user.uid)
+      try {
+        
+        const docRef=doc(db,"adminLogin","oeGUB7pn2uhljTNMvnf5TZIudHI3")
+        
+        const adminUser=await getDoc(docRef);
+  
+       
+        if(UserName==adminUser.data().username && Password==adminUser.data().password)
+        {
+
+          
+          sessionStorage.setItem('Admin', JSON.stringify(adminUser.data().username));
+          router.push('/admincms');
+        }
+        else{
+          throw new Error("Username/password is incorrect!");
+        }
+      } catch (error) {
+        console.log(error.message);
+        setErrormsg(error.message);
+      }
+      
+        
+    
     }
   };
 
@@ -31,7 +73,8 @@ const Admin = () => {
       <div className="mt-2">
         <form action="">
           <div className=" flex flex-col justify-start sm:p-0">
-            <label htmlFor="setaUsername">Username</label>
+            <span className="text-red font-light m-auto border bg-gray-200 text-center rounded-md">{errormsg}</span>
+            <label htmlFor="setaUsername">Username </label>
             <input
               type="text"
               name="setaUsername"
