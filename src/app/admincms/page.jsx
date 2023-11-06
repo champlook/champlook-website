@@ -11,6 +11,7 @@ import { collection,addDoc } from "firebase/firestore";
 
 
 
+
 const Admin = () => {
   const [heading, setHeading] = useState('');
   const [content, setContent] = useState('');
@@ -23,14 +24,19 @@ const Admin = () => {
   const [imageurl,setImageUrl] =useState("");
   // const [authorurl,setAuthorUrl]=useState("");
   const [prog,setprog]=useState(0);
+  const [isLoading,setIsLoading]=useState(false);
 
   const [items, setItems] = useState(null);
 
 useEffect(() => {
-  const items = JSON.parse(sessionStorage.getItem('Admin'));
+  setIsLoading(true);
+  
+    const items =  JSON.parse(sessionStorage.getItem('Admin'));
+  
   if (items) {
    setItems(items);
   }
+  setIsLoading(false);
 }, []);
 
   const router=useRouter();
@@ -136,7 +142,7 @@ useEffect(() => {
 
 
   const handleSubmit =(e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     
   
@@ -145,7 +151,8 @@ useEffect(() => {
 
   };
 
-  return (<>{items?
+  return (<>
+  {items?
  
     
     <div
@@ -355,8 +362,10 @@ useEffect(() => {
         </button>
         {/* <span>{imageurl}</span> */}
       </form>
-    </div>:<div className="text-center text-base border rounded-md w-1/3 h-80 ml-[32rem] mt-[10rem] bg-gray-200 pt-[9rem]"><h2>Please login as<a href="/admin" className="text-blue-400"> admin</a></h2></div>
- } </>) ;
+    </div>
+     :isLoading?<div>Loading...</div>:<div className="text-center text-base border rounded-md w-1/3 h-80 ml-[32rem] mt-[10rem] bg-gray-200 pt-[9rem]"><h2>Please login as<a href="/admin" className="text-blue-400"> admin</a></h2></div> 
+  }
+  </>) ;
   };
 
 export default Admin;
